@@ -30,13 +30,13 @@
       }
     }
 
-    function storagePermission() {
-      alert("storage");
+    function photoElbumPermission() {
+      alert("photoElbum");
 
       try {
 
 
-        window.webkit.messageHandlers.ldc.postMessage({"function":"checkStoragePermission"})
+        window.webkit.messageHandlers.ldc.postMessage({"function":"checkPhotoElbumPermission"})
         .then(
 
           console.log('test')
@@ -50,18 +50,18 @@
     }
 
     function cameraPermissionResult(result) {
-      alert(result);
+      alert("camera: " + result);
     }
 
-    function storagePermissionResult(result) {
-      alert(result);
+    function photoElbumPermissionResult(result) {
+      alert("photoElbum: " + result);
     }
 
 	</script>
 
   <button type="button" onclick="cameraPermission()">camera</button>
 
-  <button type="button" onclick="storagePermission()">storage</button>
+  <button type="button" onclick="photoElbumPermission()">photoElbum</button>
 	
 </body>
 </html>
