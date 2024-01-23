@@ -50,7 +50,13 @@
     }
 
     function cameraPermissionResult(result) {
+
       alert("camera: " + result);
+
+      if (result == true) {
+        document.getElementById('id_camara').click();
+      }
+
     }
 
     function photoElbumPermissionResult(result) {
@@ -62,6 +68,10 @@
   <button type="button" onclick="cameraPermission()">camera</button>
 
   <button type="button" onclick="photoElbumPermission()">photoElbum</button>
+
+
+  <!-- <input id='btn_aaa' type='button' value='111' onclick='afterBtnClick()' /> -->
+  <input id='id_camara' type="file" accept="image/*;capture=camera" onclick="clickCamera()" />
 	
 </body>
 </html>
