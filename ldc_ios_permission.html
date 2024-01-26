@@ -11,6 +11,25 @@
 		  alert("Hello world");	
 		})
     
+    function cameraPermissionNo() {
+      alert("camera");
+
+      try {
+
+
+        window.webkit.messageHandlers.ldc.postMessage({"function":"checkCameraPermissionNo"})
+        .then(
+        
+          console.log('testttt')
+          
+        );
+
+      } catch (error) {
+
+        console.log(error);
+      }
+    }
+
     function cameraPermission() {
       alert("camera");
 
@@ -64,6 +83,8 @@
     }
 
 	</script>
+
+  <button type="button" onclick="cameraPermissionNo()">camera 없는 method</button>
 
   <button type="button" onclick="cameraPermission()">camera</button>
 
