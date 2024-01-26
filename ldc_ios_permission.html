@@ -20,7 +20,7 @@
         window.webkit.messageHandlers.ldc.postMessage({"function":"checkCameraPermissionNo"})
         .then(
         
-          console.log('testttt')
+          console.log('testttts')
           
         );
 
@@ -68,6 +68,25 @@
       }
     }
 
+    function reqHashConfirm() {
+      alert("photoElbum");
+
+      try {
+
+
+        window.webkit.messageHandlers.ldc.postMessage({"function":"reqHashConfirm"})
+        .then(
+
+          console.log('test')
+          
+        );
+
+      } catch (error) {
+
+        console.log(error);
+      }
+    }
+
     function cameraPermissionResult(result) {
 
       alert("camera: " + result);
@@ -82,6 +101,10 @@
       alert("photoElbum: " + result);
     }
 
+    function resContinueCheck(result) {
+      alert('resContinueCheck: ' + result);
+    }
+
 	</script>
 
   <button type="button" onclick="cameraPermissionNo()">camera 없는 method</button>
@@ -89,6 +112,8 @@
   <button type="button" onclick="cameraPermission()">camera</button>
 
   <button type="button" onclick="photoElbumPermission()">photoElbum</button>
+
+  <button type="button" onclick="reqHashConfirm()">reqHashConfirm</button>
 
 
   <!-- <input id='btn_aaa' type='button' value='111' onclick='afterBtnClick()' /> -->
