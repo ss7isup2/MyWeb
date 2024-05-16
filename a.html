@@ -7,6 +7,14 @@
     var hw = document.getElementById('hw');
     hw.addEventListener('click', function(){
       alert('Hello world');
+
+        window.location.href = 'https://accounts.google.com/o/oauth2/v2/auth?client_id=' +
+      749595116173-d9kcm7a31bfful3crl51i22lvgt2lgmp.apps.googleusercontent.com +
+      '&redirect_uri=' +
+      'http://localhost:8080/googleLoginCheck' +
+      '&response_type=code' +
+      '&scope=email profile';
+        
     })
   </script>
 
